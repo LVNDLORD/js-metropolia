@@ -7,7 +7,10 @@ while (true) {
     if (inputNum !== 0) {
         numbers.push(inputNum);
     } else {
-        console.log(numbers.sort((a, b) => b - a));
+        numbers.sort((a, b) => b - a);
+        for (let num of numbers) {
+            console.log(num);
+        }
         break;
     }
 }
