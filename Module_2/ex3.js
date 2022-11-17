@@ -1,6 +1,5 @@
 'use strict';
 
-// Write a program that asks for the names of six dogs. The program prints dog names to unordered list <ul> in reverse alphabetical order. (2p)
 const numDogs = 6;
 let dogNames = [];
 
@@ -11,7 +10,8 @@ const target = document.getElementById('target');
 
 for (let i = 0; i < numDogs; i++) {
     let dog = prompt(`Enter name of dog ${i + 1} out of ${numDogs}:`);
-    dogNames.push(dog);
+    const capitalized = dog.charAt(0).toUpperCase() + dog.slice(1);
+    dogNames.push(capitalized);
 }
 
 dogNames.sort().reverse();
