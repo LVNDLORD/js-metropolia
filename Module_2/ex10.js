@@ -12,10 +12,6 @@ for (let i = 1; i <= numberCandidates; i++) {
     candidates.push(candidate);
 }
 
-console.log(candidates);
-
-// !ASK The program asks each voter in turn who they will vote for. Voter shoud enter candidate name. 
-// If the voter enters an empty value instead of the voting number, it will be interpreted as an empty vote.
 const numberVoters = Number(prompt('Number of voters?'));
 
 for (let i = 1; i <= numberVoters; i++) {
@@ -25,17 +21,8 @@ for (let i = 1; i <= numberVoters; i++) {
             candidate.votes += 1;
             console.log(candidate);
         }
-        // else if (vote == '') {
-        //     emptyVotes += 1;
-        //     return;
-        //} else {
-        //     console.log('Candidate name not in the list.');
-        // }
     })
 }
-
-console.log(candidates);
-// console.log(`empty votes ${emptyVotes}`);
 
 candidates.sort((a, b) => b.votes - a.votes);
 console.log(`The winner is ${candidates[0]['name']} with ${candidates[0]['votes']} votes.`);
