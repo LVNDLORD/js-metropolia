@@ -93,6 +93,7 @@ const picArray = [
 ];
 
 
+// add your code here
 let pictures = document.getElementById('pictures');
 let figure = [], h2 = [], img = [], figcaption = [], p = [], article = [], img_large = [];
 const modal = document.querySelector('dialog');
@@ -125,16 +126,15 @@ const createArticles = function (picArray) {
     p[i].innerHTML += picArray[i]['description'];
     article[i].appendChild(p[i]);
 
-
     article[i].addEventListener('click', () => {
       modal.querySelector('img').src = picArray[i]['image']['large'];
       modal.querySelector('img').alt = picArray[i]['title'];
       modal.showModal();
-    })
+    });
 
     closeModal.addEventListener('click', () => {
       modal.close();
-    })
+    });
   }
 }
 
